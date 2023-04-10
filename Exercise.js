@@ -48,3 +48,21 @@ function deleteTaskList() {
 }
 
 */
+
+// Przykład z użyciem sessionStorage - przechowywanie i odczytywanie listy zadań w aplikacji do zarządzania zadaniami:
+
+function saveFormData(formData) {
+    sessionStorage.setItem("formData", JSON.stringify(formData));
+}
+
+function getFormData() {
+    let formDataJson = sessionStorage.getItem("formData");
+    if (formDataJson) {
+        return JSON.parse(formDataJson);
+    }
+    return null;
+}
+
+function deleteFormData() {
+    sessionStorage.removeItem("formData");
+}
