@@ -1,3 +1,5 @@
+
+/*
 //Zapisywanie preferencji jezyka w ciasteczku
 function setLanguagePreference(language) {
     document.cookie = "preferredLanguage=" + language + "; path=/;max-age=31536000";
@@ -21,3 +23,28 @@ function getLanguagePreference() {
 function deleteLanguagePreference() {
     document.cookie = "preferredLanguage=; path=/;max-age=0";
 }
+
+
+
+//Przykład z użyciem LocalStorage - przechowywanie i odczytywanie listy zadań w aplikacji do zarządzania zadaniami:
+
+// Zapisywanie listy zadań
+function saveTaskList(taskList) {
+    localStorage.setItem("taskList", JSON.stringify(taskList));
+}
+
+// Odczytywanie listy zadań
+function loadTaskList() {
+    let taskListJson = localStorage.getItem("taskList");
+    if (taskListJson) {
+        return JSON.parse(taskListJson);
+    }
+    return [];
+}
+
+//Usuwanie listy zadań
+function deleteTaskList() {
+    localStorage.removeItem("taskList");
+}
+
+*/
